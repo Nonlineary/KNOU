@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>조건 연산자와 연결 연산자의 사용</title>
+</head>
+<body>
+  <script>
+    // 조건
+    var a,b,c,d;
+    document.write('<h4>조건 연산자 : </h4>');
+    // a = prompt('첫 번째 숫자를 입력하세요','');
+    // b = prompt('두 번째 숫자를 입력하세요','');
+    result = '입력받은 두 숫자' +a+', '+b+'중에서 ';
+    max = a>b?a:b;
+    document.write(result+'최댓값은 '+max+'입니다.<br>');
+
+    // 연결
+    document.write('<h4>연결 연산자 : </h4>');
+    a=10, b=20, c='연결', d='연산자';
+    document.write('a=10, b=20, c=연결, d=연결자<br>');
+    document.write('a+b : '+ (a+b) + '<br>');
+    document.write('c+d : '+ (c+d) + '<br>');
+    document.write('a+d : '+ (a+d) + '<br>');
+    document.write('c+b : '+ (c+b) + '<br>');
+  </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>while문의 사용</title>
+</head>
+<body>
+  <script>
+    document.write('<h4>while문으로 2단 출력</h4>');
+    var num = 1;
+    while(num <= 9){
+      document.write('2 * '+num+' = '+2*num+'<br>');
+      num++;
+    }
+
+    // 응용 
+    document.write('<h4>입력한 숫자로 출력</h4>');
+    var inputNum = prompt('원하는 숫자를 입력하세요','0');
+    var num = 1;
+    while(num <= 9){
+      document.write(inputNum+' * '+num+' = '+inputNum*num+'<br>');
+      num++;
+    }
+  </script>
+</body>
+</html>

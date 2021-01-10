@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>continue문과 break문의 사용</title>
+</head>
+<body>
+  <script>
+    var n, sum=0;
+    for(n=1; n<30; n++){
+      if(n%2 == 0) continue; // n이 짝수면 진행하지 않고 돌아가서 다시 수행
+      document.write('<'+n+'>');
+      sum+=n;
+      if(sum>=100){
+        document.write('의 합은 '+sum);
+        break; // 홀수인것은 합을 다 더해서 100이 넘으면 더이상 수행하지 않고 빠져나가라
+      }
+    }
+  </script>
+</body>
+</html>

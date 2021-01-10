@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>prompt()함수의 사용</title>
+</head>
+<body>
+  <script>
+    var imgurl = prompt('이미지 파일 입력','extension-24px.svg');
+    var count = prompt('몇 개의 그림을 표시할까요?','');
+    document.write('이미지 파일'+imgurl+'을 '+count+'개 표시합니다.<br>');
+    for(var i=0; i<count; i++){
+      if(i%10 == 0) document.write('<br>');
+      document.write('<img src="img/'+imgurl+'">');
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>이벤트 사용</title>
+</head>
+<body onLoad="alert('색상 선택 후 버튼을 클릭해보세요.')">
+  <form action="#" name="myform">
+    <input type="color" name="color">
+    <button type="button" onClick="changeColor()">색상변경</button>
+    <button type="button" onClick="restorebgColor()">원래대로</button>
+  </form>
+  <script>
+    function changeColor(){
+      document.body.style.backgroundColor = document.myform.color.value;
+    }
+    function restorebgColor(){
+      document.body.style.backgroundColor = 'white';
+    }
+  </script>
+</body>
+</html>

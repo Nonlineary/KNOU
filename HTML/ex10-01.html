@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>객체 생성 및 사용</title>
+</head>
+<body>
+  <script>
+    // [2] 객체 생성
+    s1 = new Student('홍길동','컴퓨터과학',2);
+    s2 = new Student('성춘향','통계학',1);
+
+    // [6] prototype 객체로 메모리 절약 : [4] 메서드 호출 전에 정의 되야함
+    Student.prototype.print = function(){ // 동일한 내용이 Student() 사용할적마다 계속 사용되어 메모리 낭비되므로 prototype 으로 print 메서드 공유하여 메모리 절약 (prototype 사용 안하면 new Student() 100개 만들면 print 메서드도 100개 생겨서 메모리 낭비됨)
+        document.write(this.name+'은 '+this.dept+'과 '+this.grade+'학년 학생입니다.<br>');
+    }
+
+    // [5] 기존 객체에 속성/메서드 추가 : [4] 메서드 호출 전에 정의 되야함
+    s1.region = '서울';
+    s1.subject = function(){
+      document.write('학생이름: '+this.name+'<br>');
+      document.write('소속지역대학: '+this.region+'<br>');
+      document.write('수강과목: 컴퓨터과학개론, 알고리즘, HTML5<br>');
+    }
+
+    // [3] 내장 객체의 사용
+    cDate = new Date();
+    document.write('['+(cDate.getFullYear()+'년 '+cDate.getMonth()+1)+'월 '+cDate.getDate()+'일 현재]<br>');
+    
+    // [4] 메서드 호출
+    s1.print(); s1.subject(); 
+    s2.print();
+    
+    // [1] 사용자 정의 객체의 정의
+    function Student(name,dept,grade){ 
+      this.name = name;
+      this.dept = dept;
+      this.grade = grade;
+/*       this.print = function(){ // 동일한 내용이 Student() 사용할적마다 계속 사용됨 (100개 new Student() 만들면 print 메서드도 100개 생겨서 메모리 낭비됨)
+        document.write(this.name+'은 '+this.dept+'과 '+this.grade+'학년 학생입니다.<br>');
+      } */
+    }
+
+  </script>
+</body>
+</html>

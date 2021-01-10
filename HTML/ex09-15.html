@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>함수의 사용</title>
+</head>
+<body>
+  <button type="button" onClick="n_sum()">합을 계산합니다.</button>
+  <!-- 버튼을 클릭하면 n_sum() 을 호출한다. -->
+  <script>
+    var n_sum = function(){ // 무명함수의 선언
+      var n = prompt('1~100 사이의 정수를 입력하세요','5'); // 사용자로부터 1~100 사이의 숫자를 받아서 n에 넣음 (ex : 5)
+      s = sum(n); // n을 가지고 sum() 함수를 호출함. n은 sum()의 매개변수 num에 전달되어 sum()을 실행한다.
+      document.write('1부터'+n+'까지의 합은'+s+'이다.'); // sum()의 res 최종 값인 s를 출력
+    }
+    function sum(num){ // num에 n이 전달됨 (ex: 5)
+      var res = 0;
+      document.write('<b>1부터'+num+'까지의 정수의 합을 계산합니다.</b><br>'); // 1부터 n까지의 정수의 합을 계산한다는 안내문구 (ex: 5)
+      for(i=1; i<=num; i++) res += i; // 1부터 n까지의 i를 더해서 res에 대입 반복 (ex: 5)
+      /* 반복문 계산
+        1) res = 0, i = 1 ::: res = 1 
+        2) res = 1, i = 2 ::: res = 3
+        3) res = 3, i = 3 ::: res = 6
+        4) res = 6, i = 4 ::: res = 10
+        5) res = 10, i = 5 ::: res = 15
+      */
+      return res; // res 최종 값을 s 로 돌려줘 (보내줘)
+    }
+  </script>
+</body>
+</html>

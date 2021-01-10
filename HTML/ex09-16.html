@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>콜백함수의 사용</title>
+</head>
+<body>
+  <script>
+    runTimes(10, function(){ // 함수 호출
+      document.write('안녕하세요!<br>');
+    }); // 10은 runTimes()의 n으로 전달, 함수는 callback 으로 전달됨
+
+    function runTimes(n,callback){ // 피호출 함수
+     for(var i=1; i<=n; i++) { // i가 n이 될 때까지 1씩 증가
+       document.write(i+'번째 호출 : ');
+       callback();
+     }
+    }
+  </script>
+</body>
+</html>
