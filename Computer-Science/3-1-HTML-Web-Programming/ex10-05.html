@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Date 객체의 속성과 메서드의 사용</title>
+</head>
+<body>
+  <script>
+    date = new Date();
+    document.write('<p>현재 날짜/시간 : ');
+    document.write('['+date.getFullYear()+'년 ');
+    document.write((date.getMonth()+1)+'월 ');
+    document.write(date.getDate()+'일 ');
+
+    switch(date.getDay()){
+      case 0 : document.write('일요일'); break;
+      case 1 : document.write('월요일'); break;
+      case 2 : document.write('화요일'); break;
+      case 3 : document.write('수요일'); break;
+      case 4 : document.write('목요일'); break;
+      case 5 : document.write('금요일'); break;
+      case 6 : document.write('토요일'); break;
+    }
+
+    if(date.getHours() >= 12){ // getHours가 12보다 크면
+      document.write(' 오후 '); // 오후 표기
+      hr = date.getHours()-12;  // getHours에서 12빼서 hr 변수에 대입
+      if(hr == 0) hr=12;  // hr 이 0이면 hr 변수에 12대입(12시면 -12 해서 0되므로)
+      document.write(hr+'시 '); // hr과 시 표시
+    }else{ // getHours가 12보다 작으면
+      document.write(' 오전 '); // 오전 표기
+      document.write(date.getHours()+'시 '); 
+    }
+
+    document.write(date.getMinutes()+'분 ');
+    document.write(date.getSeconds()+'초');
+    document.write(']</p>');
+
+  </script>
+</body>
+</html>
