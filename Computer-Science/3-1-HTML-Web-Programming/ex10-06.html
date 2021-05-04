@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Date 객체의 활용</title>
+</head>
+<body>
+  <script>
+    var now = new Date('2021-1-11 10:20:30');
+    var that = new Date('2022-1-1 20:30:40'); // 내년 날짜 지정
+    diff = that - now; // 지정 날짜에서 오늘 날짜 빼
+    console.log('now : '+now.getTime()); // 1971-01-01 00:00:00 UTC부터 해당일 경과한 시간을 밀리초로 반환
+    console.log('that : '+that.getTime());
+    console.log('diff(30708610000)는 밀리초 : '+diff); // 밀리초로 나옴
+
+    
+    rMilliseconds = Math.floor(diff % 1000); // 1000 으로 나누면 뒤에 세자리가 남음. floor로 소숫점 혹시 나오면 버리고 rMilliseconds 에 넣음
+    console.log('diff(30708610000)를 1000으로 나눈 나머지(0) rMilliseconds 에 넣음 : '+diff%1000); 
+
+    diff = diff/1000; // 밀리초 3자리 소수점으로 만들어서 diff 에 넣음
+    console.log('diff(30708610000)를 1000으로 나누어 diff(30708610)에 넣음 : '+diff);
+
+
+    rSeconds = Math.floor(diff % 60); // 60으로 나눈 나머지 rSecond 에 넣음
+    console.log('diff(30708610)를 60으로 나눈 나머지(10) rSeconds에 넣음 : '+diff%60);
+
+    diff = diff/60; // 60으로 나눔
+    console.log('diff(30708610)를 60으로 나누어 diff(511810.1666666667)에 넣음 : '+diff);
+
+
+    rMinutes = Math.floor(diff % 60); 
+    console.log('diff(511810.1666666667)를 60으로 나눈 나머지(10.1666666667)를 소수점 버리고 rMinutes(10)에 넣음 :'+diff%60);
+
+    diff = diff/60; // 60으로 나눔
+    console.log('diff(511810.1666666667)를 60으로 나누어 diff(8,530.169444444445)에 넣음 : '+diff);
+
+
+    rHours = Math.floor(diff % 24); 
+    console.log('diff(8,530.169444444445)를 60으로 나눈 나머지(10.169444444445)를 소수점 버리고 rHours(10)에 넣음 : '+diff%24);
+
+    diff = diff/24; // 24로 나눔
+    console.log('diff(8,530.169444444445)를 24로 나누어 diff(355.423726851851875)에 넣음 : '+diff);
+
+
+    rDays = Math.floor(diff); // rDays에 diff 소수점 버리고 넣음
+    console.log(rDays);
+
+    thatYear = that.getFullYear(); // 지정 날짜의 년도 취득하여 thatYear에 넣음
+    thatMonth = that.getMonth()+1; // 지정 날짜의 월 취득하여 thatMonth에 넣음
+    thatDay = that.getDate(); // 지정 날짜의 날짜 취득하여 thatDay에 넣음
+    document.write('<p>2022년 : '+thatYear+'년 '+thatMonth+'월 '+thatDay+'일까지</p>'); // 지정 날짜 표시
+    document.write('현재'+now.getFullYear()+'년 '+(now.getMonth()+1)+'월 '+now.getDate()+'일 ----> '+rDays+'일 '+rHours+'시간 '+rMinutes+'분 '+rSeconds+'초 남았습니다.');
+  </script>
+</body>
+</html>
