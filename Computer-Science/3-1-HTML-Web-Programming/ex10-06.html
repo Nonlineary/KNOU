@@ -51,6 +51,14 @@
     thatDay = that.getDate(); // 지정 날짜의 날짜 취득하여 thatDay에 넣음
     document.write('<p>2022년 : '+thatYear+'년 '+thatMonth+'월 '+thatDay+'일까지</p>'); // 지정 날짜 표시
     document.write('현재'+now.getFullYear()+'년 '+(now.getMonth()+1)+'월 '+now.getDate()+'일 ----> '+rDays+'일 '+rHours+'시간 '+rMinutes+'분 '+rSeconds+'초 남았습니다.');
+
+    // Workbook ex10-1
+    var today = new Date();
+    document.write('<p>기본형식 : '+today+'</p>');
+    document.write('<p>toGMTString() 형식 : '+today.toGMTString()+'</p>');
+    document.write('<p>toLocaleString() 형식 : '+today.toLocaleString()+'</p>');
+    document.write('<p>toString() 형식 : '+today.toString()+'</p>');
+
   </script>
 </body>
 </html>
