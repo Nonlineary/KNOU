@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>screen 객체의 속성 사용</title>
+</head>
+<body>
+  <script>
+    // screen : 사용자의 모니터 정보(속성)를 제공하는 객체
+    document.write('<p>순수 화면의 높이 (availHeight) : '+screen.availHeight+'</p>'); // 작업 표시줄을 제외한 화면의 높잇값 반환
+    document.write('<p>순수 화면의 너비 (availWidth) : '+screen.availWidth+'</p>'); // 작업 표시줄을 제외한 화면의 너빗값 반환
+    document.write('<p>디스플레이 화면의 높이 (height)) : '+screen.height+'</p>'); // 화면의 높잇값 반환
+    document.write('<p>디스플레이 화면의 너비 (width)) : '+screen.width+'</p>'); // 화면의 너빗값 반환
+    document.write('<p>사용 가능한 색상 수 (colorDepth)) : '+screen.colorDepth+'</p>'); // 사용자 모니터가 표현 가능한 컬러 bit 반환
+  </script>
+</body>
+</html>
