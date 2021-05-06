@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    div {width: 200px; background:lightblue;}
+  </style>
+  <title>id를 이용한 요소 접근</title>
+</head>
+<body>
+  <div id="main">안녕하세요?</div>
+  <input type="button" value="클릭해 보세요!" onClick="print('Hi, Everyone!')">
+  <script>
+    function print(msg){
+      var myDiv = document.getElementById('main');
+      myDiv.innerHTML = msg;  // innerHTML : 해당하는 요소의 컨텐츠를 나타내는 속성
+    }
+  </script>
+</body>
+</html>
