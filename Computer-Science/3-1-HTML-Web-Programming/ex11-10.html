@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>창의 크기와 위치 조정 관련 메서드 사용</title>
+</head>
+<body onLoad="window.resizeTo(500,350)">
+  <!-- IE 에서만 작동된다고 하지만 IE 에서도 다른 탭이 열려있지 않아야만 작동됨... IE 외의 브라우저에서는 어떻게 하면 되는지는 왜 안알려줌 ... -->
+  <p>브라우저 크기 조정</p>
+  <button type="button" onClick="sizeUp()">확대</button>
+  <button type="button" onClick="sizeDown()">축소</button>
+  <p>브라우저 위치 조정</p>
+  <button type="button" onClick="moveUp()">상</button>
+  <button type="button" onClick="moveDown()">하</button>
+  <button type="button" onClick="moveLeft()">좌</button>
+  <button type="button" onClick="moveRight()">우</button>
+  <script>
+    function sizeUp(){window.resizeBy(20,20);}
+    function sizeDown(){window.resizeBy(-20,-20);}
+    function moveUp(){window.moveBy(0,-20);}
+    function moveDown(){window.moveBy(0,20);}
+    function moveLeft(){window.moveBy(-20,0);}
+    function moveRight(){window.moveBy(20,0);}
+  </script>
+</body>
+</html>

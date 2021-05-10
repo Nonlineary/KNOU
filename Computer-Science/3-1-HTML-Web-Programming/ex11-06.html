@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>요소의 스타일 수정</title>
+</head>
+<body>
+  <div id="main">
+    <p>버튼을 누르면 요소의 스타일이 변경됩니다.</p>
+  </div>
+  <button type="button" onClick="changeStyle()">스타일변경</button>
+  <script>
+    const myDiv = document.getElementById('main');
+    const myDivStyle = myDiv.style;
+    function changeStyle(){
+      myDivStyle.background = 'chocolate';
+      myDivStyle.fontWeight = 'bold';
+      myDivStyle.color = 'white';
+      myDivStyle.fontStyle = 'italic';
+    }
+  </script>
+</body>
+</html>

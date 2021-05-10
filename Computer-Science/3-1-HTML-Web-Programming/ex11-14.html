@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>setInterval() 메서드를 이용한 시간 표시</title>
+</head>
+<body onload="showTime()">
+  <div id="clock"></div>
+  <button type="button" onclick="showTime()">다시 시작</button>
+  <button type="button" onclick="stopClock()">일시 정지</button>
+  <script>
+    let timerID;
+    const clock = document.getElementById('clock');
+    clock.style.background = 'chocolate';
+    clock.style.color = 'white';
+    clock.style.fontWeight = 'bold';
+    function showTime(){
+      timerID = setInterval(function(){
+        const today = new Date().toLocaleString();
+      clock.innerHTML = today;
+      },1000);
+    }
+    function stopClock(){
+      clearInterval(timerID);
+    }
+  </script>
+</body>
+</html>

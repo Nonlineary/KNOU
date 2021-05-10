@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>새로운 요소의 추가</title>
+</head>
+<body>
+  <button type="button" onClick="addP()">텍스트 추가</button>
+  <button type="button" onClick="addImg()">이미지 추가</button>
+  <div id="main"></div>
+  <script>
+    const main = document.getElementById('main');
+    function addP(){
+      const newP = document.createElement('p');
+      const text = document.createTextNode('p요소가 추가되었습니다.');
+      newP.appendChild(text);
+      main.appendChild(newP);
+    }
+    function addImg(){
+      const newImg = document.createElement('img');
+      const imgSrc = document.createAttribute('src');
+      const imgAlt = document.createAttribute('alt');
+      imgSrc.value = 'img/filter_vintage_black_24dp.svg';
+      imgAlt.value = 'flower';
+      newImg.setAttributeNode(imgSrc);
+      newImg.setAttributeNode(imgAlt);
+      main.appendChild(newImg);
+    }
+  </script>
+</body>
+</html>

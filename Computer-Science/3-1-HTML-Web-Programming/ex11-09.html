@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>window 객체의 open(), close() 메서드 이용</title>
+</head>
+<body>
+  <button type="button" onclick="winOpen()">창 열기</button>
+  <script>
+    function winOpen(){
+      window.open('ex11-09-1.html','_blank','width=400, height=400');
+    /* 연결할 URL, 윈도우 이름(윈도우간 통신하는데 사용) or 타겟, 옵션리스트, replace 
+     * replace - Specifies whether the URL creates a new entry or replaces the current entry in the history list. The following values are supported :
+       : true - URL replaces the current document in the history list
+       : false - URL creates a new entry in the history list
+     */
+    }
+  </script>
+</body>
+</html>

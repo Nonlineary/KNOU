@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .bgcolor {background: lightblue;}
+  </style>
+  <title>클래스명을 이용한 요소 접근</title>
+</head>
+<body>
+  <h1 class="bgcolor">클래스명을 이용한 요소 접근</h1>
+  <p class="bgcolor">사용 메서드 :</p>
+  <div class="bgcolor">getElementsByClassName()</div>
+  <script>
+    const myClass = document.getElementsByClassName('bgcolor');
+    document.write('<br><hr> 각 요소의 내용 : ');
+    document.write('<ul>');
+      for(let i=0; i<myClass.length; i++) // .bgcolor 의 갯수까지
+        document.write('<li>'+myClass[i].innerHTML+'</li>'); // innerHTML 로 취득
+      document.write('</ul>');
+  </script>
+</body>
+</html>

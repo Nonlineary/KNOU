@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    img {width: 200px;}
+  </style>
+  <title>요소의 속성 수정</title>
+</head>
+<body>
+  <p>이미지 위로 마우스를 옮겨 보세요!</p>
+  <img src="img/extension-24px.svg" alt="이미지 변경" id="image" onmouseover="changeImg('filter_vintage_black_24dp.svg')" onmouseout="changeImg('extension-24px.svg')">
+  <script>
+    const img = document.getElementById('image');
+    const imgUrl = 'img/';
+    function changeImg(imgOn){
+      img.src = imgUrl+imgOn;
+    }
+  </script>
+</body>
+</html>

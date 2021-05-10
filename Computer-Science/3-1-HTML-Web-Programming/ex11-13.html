@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>setTimeout()과 clearTimeout()</title>
+</head>
+<body onload="show(10)">
+  <div id="myArea"></div>
+  <script>
+    let timerID;
+    const myArea = document.getElementById('myArea');
+    myArea.style.background = 'chocolate';
+    myArea.style.color = 'white';
+    myArea.style.fontSize = '2em';
+    function show(n){
+      if(n<1){
+        clearTimeout(timerID);
+        location.replace('ex11-12.html'); 
+        // location 객체 : 현재 URL에 대한 정보를 유지/관리하는 객체 
+        // replace 는 현재 문서를 다른 URL 문서로 바꿔주는 location의 속성
+      }else{
+        myArea.innerHTML = n+'초 후에 시간 문서로 이동합니다.';
+        timerID = setTimeout('show('+(n-1)+')',1000); 
+        // 10초에서 9초로 가야하니 (1초씩 줄어야 하니) 매개변수의 값을 하나 줄여줘야 하므로 n-1
+      }
+    }
+  </script>
+</body>
+</html>

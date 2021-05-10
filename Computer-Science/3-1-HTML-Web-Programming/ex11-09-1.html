@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    img {width: 200px;}
+  </style>
+  <title>ex11-09.html의 새 창</title>
+</head>
+<body>
+  <img src="img/filter_vintage_black_24dp.svg" alt="flower">
+  <button type="button" onClick="winClose()">창 닫기</button>
+  <script>
+    function winClose(){
+      const ans = confirm('창을 닫겠습니까?');
+      if(ans) window.close();
+    }
+  </script>
+</body>
+</html>

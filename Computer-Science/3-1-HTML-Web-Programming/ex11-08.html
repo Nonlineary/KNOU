@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>기존 요소의 삭제</title>
+</head>
+<body>
+  <button type="button" onClick="removeNode()">요소삭제</button>
+  <ul id="list">
+    <li id="i1">항목1</li>
+    <li id="i2">항목2</li>
+    <li id="i3">항목3</li>
+  </ul>
+  <script>
+    function removeNode(){
+      const parent = document.getElementById('list');
+      const child = document.getElementsByTagName('li');
+      parent.removeChild(child[1]);
+    }
+  </script>
+</body>
+</html>

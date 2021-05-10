@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>setTimeout() 메서드의 재귀적 호출</title>
+</head>
+<body onload="showTime()">
+  <div id="clock"></div>
+  <script>
+    const clock = document.getElementById('clock');
+    clock.style.background = 'chocolate';
+    clock.style.color = 'white';
+    clock.style.fontWeight = 'bold';
+    function showTime(){
+      const today = new Date().toLocaleString();
+      clock.innerHTML = today;
+      setTimeout(showTime,1000);
+      // 혹은 setTimeout('showTime()',1000);
+    }
+  </script>
+</body>
+</html>

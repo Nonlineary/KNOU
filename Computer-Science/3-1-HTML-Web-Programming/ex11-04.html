@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    b {font-size: 1.2em; color: chocolate;}
+    p b {font-size: 1em; color: cornflowerblue;}
+  </style>
+  <title>innerHTML과 textContent 속성의 차이</title>
+</head>
+<body>
+  <ul id="myList">
+    <li id="item1">HTML5+CSS3</li>
+    <li id="item2">JavaScript+jQuery</li>
+  </ul>
+  <button type="button" onClick="alert(x)">innerHTML</button>
+  <button type="button" onClick="alert(y)">textContent</button>
+  <div>
+    <b>innerHtml로 가져와서 :</b>
+    <p><b>1. innerHTML로 설정하기 : </b><span id="inner_inner"></span></p>
+    <p><b>2. textContent로 설정하기 : </b><span id="inner_text"></span></p>
+  </div>
+  <div>
+    <b>textContent로 가져와서 :</b>
+    <p><b>1. innerHTML로 설정하기 : </b><span id="text_inner"></span></p>
+    <p><b>2. textContent로 설정하기 : </b><span id="text_text"></span></p>
+  </div>
+  <script>
+    const myList = document.getElementById('myList');
+    const x = myList.innerHTML;
+    const y = myList.textContent;
+    compare();
+    function compare(){
+      document.getElementById('inner_inner').innerHTML = x;
+      document.getElementById('inner_text').textContent = x;
+      document.getElementById('text_inner').innerHTML = y;
+      document.getElementById('text_text').textContent = y;
+    }
+    
+  </script>
+</body>
+</html>
