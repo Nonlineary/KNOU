@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .wrap:after {content: ""; display: block; clear: both;}
+    .wrap div {float: left; width: 200px; height: 200px; padding: 20px; margin: 20px; border: 1px dashed #000;  border-radius: 20px;}
+    .div1 {background: bisque;}
+    .div2 {background: beige;}
+    .btn1 {margin-left: 20px;}
+    img {width: 200px;}
+  </style>
+  <title>remove()와 empty() 메서드의 사용</title>
+</head>
+<body>
+  <div class="wrap">
+    <div class="div1"><img src="img/filter_vintage_black_24dp.svg" alt="flower"></div>
+    <div class="div2"><img src="img/nightlight_round_black_24dp.svg" alt="moon"></div>
+  </div>
+  <button class="btn1" type="button">empty()</button>
+  <button class="btn2" type="button">remove()</button>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $('.btn1').on('click',function(){
+      $('.div1').empty();
+    });
+    $('.btn2').on('click',function(){
+      $('.div2').remove();
+    });
+  </script>
+</body>
+</html>

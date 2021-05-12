@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>요소의 속성값 설정하기</title>
+</head>
+<body>
+  <p>사이즈를 변경하고 싶은 이미지의 버튼을 클릭하세요!</p>
+  <button class="btn-puzzle" type="button">Puzzle</button><button class="btn-flower" type="button">Flower</button><button class="btn-reset" type="button">Reset</button><br>
+  <img src="img/extension-24px.svg" alt="puzzle" class="puzzle">
+  <img src="img/filter_vintage_black_24dp.svg" alt="flower" class="flower">
+  <img src="img/filter_vintage_black_24dp.svg" alt="flower" class="flower">
+  <img src="img/filter_vintage_black_24dp.svg" alt="flower" class="flower">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $('.btn-puzzle').on('click',function(){
+      $('.puzzle').attr('width',200);
+    });
+    $('.btn-flower').on('click',function(){
+      $('.flower').attr('width',function(a){
+        return(a+1)*75 // 이벤트객체명을 반드시 index라고 작성할 필요 없음 : 0부터 시작함
+      });
+    });
+    $('.btn-reset').on('click',function(){
+      $('img').removeAttr('width'); // 2개 이상 속성 제거때는 '' 안에 띄어쓰기로 구분
+    });
+  </script>
+</body>
+</html>

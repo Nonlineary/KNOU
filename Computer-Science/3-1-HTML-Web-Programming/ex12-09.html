@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>append()와 prepend() 메서드의 사용</title>
+</head>
+<body>
+  <p>방송통신</p>
+  <hr>
+  <ul>
+    <li>HTML 웹프로그래밍</li>
+    <li>알고리즘</li>
+  </ul>
+  <button class="btn1" type="button">학교 이름 완성</button><button class="btn2" type="button">과목명 완성</button>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $('.btn1').on('click',function(){
+      $('p').prepend('<b>한국</b>').append('<b>대학교</b>');
+    });
+    $('.btn2').on('click',function(){
+      $('ul').prepend('<li><b>컴퓨터과학개론</b></li>').append('<li><b>HTML5</b></li>');
+    });
+  </script>
+</body>
+</html>

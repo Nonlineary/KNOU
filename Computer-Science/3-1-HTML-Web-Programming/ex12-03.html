@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>text()와 html() 메서드의 이용</title>
+</head>
+<body>
+  <button id="text1" type="button">text() 가져오기</button>
+  <button id="text2" type="button">text() 수정하기</button><br>
+  <button id="html1" type="button">html() 가져오기</button>
+  <button id="html2" type="button">html() 수정하기</button>
+  <div id="mydiv"><b>text()와 html() 메서드</b></div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    const mydiv = $('#mydiv');
+    $('#text1').on('click',function(){
+      alert(mydiv.text());
+    });
+    $('#text2').on('click',function(){
+      mydiv.text('<h1>text() 메서드를 통한 텍스트 콘텐츠 수정</h1>');
+    });
+    $('#html1').on('click',function(){
+      alert(mydiv.html());
+    });
+    $('#html2').on('click',function(){
+      mydiv.html('<h1>html() 메서드를 통한 텍스트 콘텐츠 수정</h1>');
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    div {
+      position: absolute; left: 10px; top: 50px;
+      width: 200px; height: 100px;
+      background: coral;
+      color: white; line-height: 100px; text-align: center;
+    }
+  </style>
+  <title>animate() 메서드의 사용</title>
+</head>
+<body>
+  <button type="button" class="btn1">시작</button>
+  <button type="button" class="btn2">초기화</button>
+  <div>animate()</div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $('.btn1').on('click',function(){
+      $('div').animate({
+        left:'+=150',
+        top:'+=150',
+        borderRadius:'+=50'
+      });
+    });
+    $('.btn2').on('click',function(){
+      $('div').animate({
+        left:10, top:50, borderRadius:0
+      });
+    });
+  </script>
+</body>
+</html>

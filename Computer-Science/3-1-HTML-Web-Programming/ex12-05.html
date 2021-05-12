@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    img {width: 300px; cursor:pointer;}
+  </style>
+  <title>요소의 속성값 가져오기</title>
+</head>
+<body>
+  <p>이미지의 정보를 알고 싶으면 이미지를 클릭하세요!</p>
+  <img src="img/filter_vintage_black_24dp.svg" alt="flower">
+  <div></div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $('img').on('click',function(){
+      const thisImg = $(this);
+      const imgURL = thisImg.attr('src');
+      const imgAlt = thisImg.attr('alt');
+      const imgWidth = thisImg.css('width');
+      $('div').html('파일명 : '+imgURL+'<br>대체텍스트 : '+imgAlt+'<br>가로사이즈 : '+imgWidth);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    div {
+      cursor:pointer;
+      width: 500px; height: 25px; border:1px solid #000;
+      text-align: center;
+    }
+  </style>
+  <title>css() 메서드의 사용</title>
+</head>
+<body>
+  <div id="container">css() 메서드로 문서 스타일 조작하기</div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $('#container').on({
+      click:function(){alert($(this).css('border'));}, // FF에서 alert에 왜 border 값을 못불러오지? Chrome, Edge 는 잘 불러옴
+      mouseenter:function(){$(this).css({background:'cornflowerblue',color:'white',borderRadius:10})},
+      mouseleave:function(){$(this).css({background:'',color:'',borderRadius:''})} // css 값 '' 로 공백두면 적용한 값을 취소시킴
+    });
+  </script>
+</body>
+</html>

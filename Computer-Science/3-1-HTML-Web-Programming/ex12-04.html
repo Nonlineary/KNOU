@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>val() 메서드의 사용</title>
+</head>
+<body>
+  <label for="grade">학년 : </label><input type="text" id="grade">
+  <label for="name">이름 : </label><input type="text" id="name">
+  <button id="check" type="button">입력값 확인</button>
+  <div id="value"></div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $('#check').on('click',function(){
+      $('#value').text($('#grade').val()+'학년 '+$('#name').val()+'입니다.');
+    });
+  </script>
+</body>
+</html>

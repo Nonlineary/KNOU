@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    p {
+      padding: 20px;
+      background: gold;
+    }
+    .wrap {
+      display: flex;
+      justify-content: space-around;
+    }
+    .wrap div {
+      display: flex; 
+      align-items: center; justify-content: center;
+      width: 20%; height: 100px; margin: 20px; border: 1px dashed #000;
+      background: chocolate;
+      color: white; text-align: center;
+    }
+    .div3 ~ div {
+      cursor: pointer;
+      background: cornflowerblue;
+    }
+  </style>
+  <title>페이드 효과의 사용</title>
+</head>
+<body>
+  <button class="btn1" type="button">fadeIn()</button>
+  <button class="btn2" type="button">fadeOut()</button>
+  <button class="btn3" type="button">fadeToggle()</button>
+  <div class="wrap">
+    <div class="div1">fadeIn()</div>
+    <div class="div2">fadeOut()</div>
+    <div class="div3">fadeToggle()</div>
+    <div class="div4">fadeTo(,0.1) 클릭</div>
+    <div class="div5">fadeTo(,0.3) 클릭</div>
+    <div class="div6">fadeTo(,0.6) 클릭</div>
+  </div>
+  <p>버튼을 클릭하세요</p>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    const p = $('p');
+    $('.div1').hide();
+    $('button').on('click',function(){
+      $('.div4,.div5,.div6').css('opacity',1);
+    });
+    $('.btn1').on('click',function(){
+      p.text('fadeIn 되었습니다.');
+      $('.div1').fadeIn(1000);
+    });
+    $('.btn2').on('click',function(){
+      p.text('fadeOut 되었습니다.');
+      $('.div2').fadeOut(1000);
+    });
+    $('.btn3').on('click',function(){
+      p.text('fadeToggle 되었습니다.');
+      $('.div3').stop().fadeToggle(1000);
+    });
+    $('.div4,.div5,.div6').on({
+      mouseenter : function(){p.text('파란 박스를 클릭하세요.');},
+      mouseleave : function(){p.text('버튼을 클릭하세요.');},
+      click : function(){
+        $('.div1').fadeOut();
+        $('.div2,.div3').fadeIn();
+        $('.div4').fadeTo('',0.1);
+        $('.div5').fadeTo(1000,0.3);
+        $('.div6').fadeTo(2000,0.6);
+      }
+    });
+  </script>
+</body>
+</html>

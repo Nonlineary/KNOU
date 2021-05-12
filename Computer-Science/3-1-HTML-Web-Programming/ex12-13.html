@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    img {display: block; width: 200px;}
+  </style>
+  <title>hide()와 show()에서 속도 및 콜백함수의 사용</title>
+</head>
+<body>
+  <button class="btn1" type="button">hide()</button>
+  <button class="btn2" type="button">show()</button>
+  <div class="msg"><img src="img/filter_vintage_black_24dp.svg" alt="flower"><p></p></div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    const msg = $('.msg');
+    const img = $('img');
+    const p = $('p');
+    $('.btn1').on('click',function(){
+      img.hide(2000,function(){
+        msg.css('background','beige');
+        p.text('hide() 완료');
+      });
+    });
+    $('.btn2').on('click',function(){
+      img.show('fast',function(){
+        msg.css('background','bisque');
+        p.text('show() 완료');
+      });
+    });
+  </script>
+</body>
+</html> 

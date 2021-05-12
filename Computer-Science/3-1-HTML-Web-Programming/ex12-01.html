@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    img {display: block; width: 200px;}
+  </style>
+  <title>jQuery를 이용한 첫 번째 예제</title>
+</head>
+<body>
+  <button type="button" id="show">그림 보이기</button>
+  <button type="button" id="hide">그림 숨기기</button>
+  <img src="img/filter_vintage_black_24dp.svg" alt="flower">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    const img = $('img');
+    $('#show').on('click',function(){
+      img.show();
+    });
+    $('#hide').on('click',function(){
+      img.hide();
+    });
+  </script>
+</body>
+</html>

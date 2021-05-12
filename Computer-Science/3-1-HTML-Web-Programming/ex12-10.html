@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    img {width: 200px;}
+  </style>
+  <title>before()와 after() 메서드의 사용</title>
+</head>
+<body>
+  <div><img src="img/extension-24px.svg" alt="puzzle" class="puzzle"></div>
+  <button class="btn1" type="button">flower</button>
+  <button class="btn2" type="button">moon</button>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    const puzzle = $('.puzzle');
+    $('.btn1').on('click',function(){
+      puzzle.before('<img src="img/filter_vintage_black_24dp.svg" alt="flower">');
+    });
+    $('.btn2').on('click',function(){
+      puzzle.after('<img src="img/nightlight_round_black_24dp.svg" alt="moon">');
+    });
+  </script>
+</body>
+</html>

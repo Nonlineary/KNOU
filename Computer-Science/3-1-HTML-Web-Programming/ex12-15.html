@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    div {padding: 10px; margin: 10px; border: 1px solid #000;}
+    i {display: block; color: red;}
+    .question {cursor:pointer;}
+    .answer {display: none; background: #fffff1;}
+  </style>
+  <title>슬라이드 효과의 사용</title>
+</head>
+<body>
+  <div class="question">
+    <p><b>[질문]</b> 슬라이드 효과를 지정하는 메서드의 종류는?<i>정답을 확인하려면 클릭하세요!!</i></p>
+  </div>
+  <div class="answer">
+    <b>[정답]</b>
+    <ol>
+      <li>slideUp()</li>
+      <li>slideDown()</li>
+      <li>slideToggle()</li>
+    </ol>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    const question = $('.question');
+    const answer = $('.answer');
+    question.on('click',function(){
+      $(this).css('cursor','default');
+      answer.slideDown().css('cursor','pointer');
+    });
+    answer.on('click',function(){
+      $(this).slideUp();
+      question.css('cursor','pointer');
+    });
+  </script>
+</body>
+</html>

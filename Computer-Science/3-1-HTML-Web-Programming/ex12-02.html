@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    div {
+      width: 500px; height: 50px; border: 1px solid #000;
+      line-height: 50px; text-align: center; text-transform: uppercase;
+    }
+  </style>
+  <title>마우스 관련 이벤트 처리</title>
+</head>
+<body>
+  <div id="msg">마우스 이벤트</div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    const msg = $('#msg');
+    msg.on({
+      mouseenter : function(){$(this).text('mouseenter 이벤트').css({background:'cornflowerblue', color:'white'});},
+      mouseleave : function(){$(this).text('mouseleave 이벤트').css({background:'chocolate', color:'white'});},
+      mousedown : function(e){$(this).text(e.type+e.which+' 버튼을 '+e.pageX+', '+e.pageY+'에서 누를 때').css({background:'navy', color:'white'});},
+      mouseup : function(e){$(this).text(e.type+e.which+' 버튼을 '+e.pageX+', '+e.pageY+'에서 누를 때').css({background:'darkred', color:'white'});},
+      // e.type 이벤트 종류 / e.which 눌러진 마우스 버튼의 종류 (왼쪽 1, 중간 2, 오른쪽 3)
+    });
+  </script>
+</body>
+</html>

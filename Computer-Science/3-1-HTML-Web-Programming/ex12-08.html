@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    div {
+      width: 500px; height: 25px; border: 1px solid #000;
+      text-align: center;
+      transition: background-color 0.3s;
+    }
+    .hover {
+      border-radius: 10px;
+      background: chocolate; 
+      color: white;
+    }
+    .border {
+      border-style: dashed; border-color: white;
+    }
+  </style>
+  <title>class 속성 조작 메서드의 이용</title>
+</head>
+<body>
+  <div class="box">addClass()와 removeClass()</div>
+  <button type="button">toggleClass()</button>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $('.box').on({
+      mouseenter:function(){$(this).addClass('hover');},
+      mouseleave:function(){$(this).removeClass('hover');},
+    });
+    $('button').on('click',function(){
+      $('.box').toggleClass('border hover'); // 2개 이상 적용시에는 공백으로 구분
+    });
+  </script>
+</body>
+</html>
