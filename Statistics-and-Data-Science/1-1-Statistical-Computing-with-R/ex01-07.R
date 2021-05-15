@@ -3,4 +3,4 @@ mean(y)
 mean(y,na.rm=TRUE) # 또는 na.rm=T 결측치를 무시하고 계산하고 싶을 때 
 is.na(y) # 결측치 일 경우 TRUE
 which(is.na(y)) # TRUE가 몇번째에 위치하는지를 물어봄
-sum(is.na(y)) # TRUE는 1, FALSE는 0 : 결측치가 몇개인지 합을 내줌
+sum(is.na(y)) # TRUE는 1, FALSE는 0 : 결측치가 몇개인지 합을 내줌 
