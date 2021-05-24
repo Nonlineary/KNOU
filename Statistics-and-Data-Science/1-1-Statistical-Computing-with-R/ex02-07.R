@@ -8,4 +8,4 @@ write.csv(dat,'ex02-07.csv',quote=F)
 # file="파일경로/파일명"
 # sep="구분자"
 # row.names=T  행번호를 지정하여 함께 저장할지 여부
-# col.names=T  열이름을 함께 저장할지 여부
+# col.names=T  열이름을 함께 저장할지 여부 
