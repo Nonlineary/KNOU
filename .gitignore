@@ -125,3 +125,6 @@ po/*~
 ### R.Bookdown Stack ###
 # R package: bookdown caching files
 /*_files/
+/Computer-Science/1-1-C-Programming/ch2-ex02-01/.vs/ch2-ex02-01/v16/Browse.VC.db-shm
+/Computer-Science/1-1-C-Programming/ch2-ex02-01/.vs/ch2-ex02-01/v16/Browse.VC.db-wal
+/Computer-Science/1-1-C-Programming/ch2-ex02-01/.vs/ch2-ex02-01/v16/Browse.VC.opendb
