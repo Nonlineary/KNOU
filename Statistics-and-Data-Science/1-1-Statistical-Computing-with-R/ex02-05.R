@@ -1,4 +1,8 @@
-dat3 <- data.frame()
-dat3 = edit(dat3) # data.frame 편집기 형태로 dat3 를 입력해서 dat3에 다시 넣겠다 
+# edit() 데이터 입력 창을 염
+
+# edit()를 이용하여 데이터 프레임을 만들되 빈 객체를 데이터 프레임으로 지정해 준 뒤 창을 열어 데이터를 입력
+dat3 <- data.frame() # 엑셀편집창 같은 형태로 출력. 데이터프레임 형태로 dat3을 만들어 줌. edit()를 사용하기 위해서는 빈 데이터프레임을 먼저 만들어줘야 함.
+dat3 <- edit(dat3) # data.frame 편집기 형태로 dat3 를 입력해서 dat3에 다시 넣겠다. data.frame()를 가지고 있는 dat3를 편집을 해서 dat3에 다시 넣겠다. 
+# edit() 실행시 입력창 열림. 실무에서는 엑셀파일 불러오지 직접 데이터입력창 실행하여 열진 않음
 dat3
 write.table(dat3,'ex02-05.txt')
