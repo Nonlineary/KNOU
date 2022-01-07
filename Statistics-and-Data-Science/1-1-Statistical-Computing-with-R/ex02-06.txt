@@ -8,7 +8,7 @@
        Species  
  setosa    :50  
  versicolor:50  
- virginica :50 
+ virginica :50  
                 
                 
                 
