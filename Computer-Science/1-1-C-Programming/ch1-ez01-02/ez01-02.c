@@ -10,7 +10,7 @@ int product(int x, int y); // 사용자 함수 원형
 /* main() 함수 */
 void main() {
 	/* 첫 번째 수를 입력 */
-	printf("Enter number between 1 and 100 : ");
+	printf("Enter a number between 1 and 100 : ");
 	scanf("%d",&a);
 
 	/* 두 번째 수를 입력 */
@@ -26,3 +26,4 @@ void main() {
 int product(int x, int y) {
 	return (x * y);
 }
+

@@ -1,1 +1,2 @@
 E:\Angela\Git\KNOU\Computer-Science\1-1-C-Programming\ez01-02\Debug\ez01-02.exe
+E:\Angela\Git\KNOU\Computer-Science\1-1-C-Programming\ch1-ez01-02\Debug\ez01-02.exe
