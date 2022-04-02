@@ -2,4 +2,3 @@
 void main() {
 	printf("Hello C Programming \n");
 }
-
