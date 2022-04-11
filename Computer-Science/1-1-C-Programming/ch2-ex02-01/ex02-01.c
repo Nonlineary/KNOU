@@ -1,3 +1,5 @@
+// 변수의 사용 [예]
+
 #include <stdio.h>
 void main() {
 	int a, b;	// 정수형 변수 a,b를 선언
