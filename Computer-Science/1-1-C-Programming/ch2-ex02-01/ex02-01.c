@@ -7,3 +7,4 @@ void main() {
 	b = 50;		// 변수 b에 50 대입
 	printf("a=%d,b=%d\n", a, b);	// 변수 a,b값 출력
 }
+
