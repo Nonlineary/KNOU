@@ -11,4 +11,4 @@
 ## Statistics-and-Data-Science
 | Folder | Subject | Professor | Study |
 | --- | --- | --- | :---: |
-| 1-1-Statistical-Computing-with-R | R컴퓨팅 | [장영재 *Youngjae Chang*](https://faculty.knou.ac.kr/~yjchang) | 2021 | 
+| 1-1-Statistical-Computing-with-R | R컴퓨팅 | [장영재 *Youngjae Chang*](https://faculty.knou.ac.kr/~yjchang) | 2021 |
