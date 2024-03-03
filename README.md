@@ -5,8 +5,8 @@
 | --- | --- | --- | :---: |
 | 1-1-C-Programming | C프로그래밍 | [김형근 *Hyoung-Geun Kim*](https://cs.knou.ac.kr/~hgrikim) | 2023 Winter |
 | 1-2-C++-Programming | C++프로그래밍 | [이병래 *Byeong-Rae Lee*](https://cs.knou.ac.kr/~brlee) |  |
+| 2-1-HTML5-Web-Programming | HTML5웹프로그래밍 | [이관용 *Kwanyong Lee*](https://cs.knou.ac.kr/~kylee) | 2024 |
 | 3-1-HTML-Web-Programming | HTML 웹프로그래밍 | [이관용 *Kwanyong Lee*](https://cs.knou.ac.kr/~kylee) | 2020 Winter |
-| 4-2-HTML5 | HTML5 | [이관용 *Kwanyong Lee*](https://cs.knou.ac.kr/~kylee) | 2022 |
 
 ## Statistics-and-Data-Science
 | Folder | Subject | Professor | Study |
